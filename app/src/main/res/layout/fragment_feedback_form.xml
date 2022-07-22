@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="customer"
+            type="com.example.suryatraderscustomer.models.Customer" />
+
+        <variable
+            name="customerViewModel"
+            type="com.example.suryatraderscustomer.viewmodels.CustomerViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".views.ChangePasswordFragment">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/orange"
+            android:layout_gravity="center_horizontal"
+            android:text="Feedback Form" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:text="Subject:*" />
+
+
+
+        <EditText
+            android:id="@+id/feedback_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="@dimen/_10sdp"
+            android:lines="2"
+            android:text="@={customerViewModel.subject}"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:inputType="text"
+            android:textColor="#707070"
+            android:textColorHint="#707070"
+            android:background="@drawable/background_input"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#707070"
+            android:text="Message:*" />
+
+        <EditText
+            android:id="@+id/feedback_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={customerViewModel.message}"
+            android:textSize="15sp"
+            android:padding="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:minLines="2"
+            android:lines="50"
+            android:maxLines="100"
+            android:inputType="text|textMultiLine"
+            android:textColor="#707070"
+            android:textColorHint="#707070"
+            android:background="@drawable/background_input"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <Button
+            android:id="@+id/btn_feedback_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

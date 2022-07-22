@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<resources>
+    <string name="app_name">Surya Traders</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_first_category">FirstCategoryActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="about_us">Surya Traders is a well-established fabric store. We strive to be the most trusted and inspirational fabric store.\n For us, every fabric, every color, and texture is a separate passion that forms the clothes...\n Such a strong passion that is brimming with the secrets of fashion for almost a quarter of a century...\nRunning its business for more than 20 years, Surya Traders is a global actor in the sector with its vision, investment in production technologies, products it designs and develops, and corporate values that it attaches importance to.\nContinuously developing and growing, and leading and guiding the sector it operates in, Surya Traders has always broken grounds and led the way with its physical investments, production technologies, automation systems, human resources, and its quality documents recognized all over the world.\nToday, as Surya Traders, we keep serving our facility in India with our design, which does not keep up with fashion but directs fashion.\nNow let’s embark on new journeys together.\nLet’s share our colors and our passions.\nAnd let’s write up brand-new stories together.</string>
+
+</resources>

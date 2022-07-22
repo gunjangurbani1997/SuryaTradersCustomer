@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="thirdCategoryMsg"
+            type="com.example.suryatraderscustomer.models.ThirdCategoryMsg" />
+        <variable
+            name="thirdCategory"
+            type="com.example.suryatraderscustomer.models.ThirdCategory" />
+        <variable
+            name="thirdCategoryInterface"
+            type="com.example.suryatraderscustomer.adapters.ThirdCategoryListAdapter.ThirdCategoryInterface" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_175sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:strokeColor="@color/orange"
+        app:cardElevation="@dimen/_2sdp"
+        app:rippleColor="@color/dim_org_end"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{()->thirdCategoryInterface.onThirdCategoryItemClick(thirdCategoryMsg)}">
+
+        <ImageView
+            android:id="@+id/thirdCategoryImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:thirdCategoryImage="@{thirdCategoryMsg.image}"
+            tools:srcCompat="@tools:sample/avatars" />
+
+
+        <TextView
+            android:id="@+id/thirdCategoryNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:text="@{String.valueOf(thirdCategoryMsg.name)}"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+        <TextView
+            android:id="@+id/thirdCategoryPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:text="@{`Price: ₹`+String.valueOf(thirdCategoryMsg.price)+`/`+thirdCategoryMsg.units}"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

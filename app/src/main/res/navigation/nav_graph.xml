@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstCategoryFragment">
+
+    <fragment
+        android:id="@+id/firstCategoryFragment"
+        android:name="com.example.suryatraderscustomer.views.FirstCategoryFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_first_category" >
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_secondCategoryFragment"
+            app:destination="@id/secondCategoryFragment" />
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_allOrderDetailsFragment"
+            app:destination="@id/allOrderDetailsFragment" />
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_firstCategoryFragment_to_feedbackFormFragment"
+            app:destination="@id/feedbackFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondCategoryFragment"
+        android:name="com.example.suryatraderscustomer.views.SecondCategoryFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_second_category" >
+        <action
+            android:id="@+id/action_secondCategoryFragment_to_thirdCategoryFragment"
+            app:destination="@id/thirdCategoryFragment" />
+        <argument
+            android:name="firstCategoryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_secondCategoryFragment_to_secondCategoryProductDetailFragment"
+            app:destination="@id/secondCategoryProductDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.example.suryatraderscustomer.views.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_allOrderDetailsFragment"
+            app:destination="@id/allOrderDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdCategoryFragment"
+        android:name="com.example.suryatraderscustomer.views.ThirdCategoryFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_third_category" >
+        <argument
+            android:name="secondCategoryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_thirdCategoryFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.suryatraderscustomer.views.ProductDetailFragment"
+        android:label="Product Details" >
+        <argument
+            android:name="thirdCategoryMsg"
+            app:argType="com.example.suryatraderscustomer.models.ThirdCategoryMsg" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondCategoryProductDetailFragment"
+        android:name="com.example.suryatraderscustomer.views.SecondCategoryProductDetailFragment"
+        android:label="Product Details" >
+        <argument
+            android:name="secondCategoryMsg"
+            app:argType="com.example.suryatraderscustomer.models.SecondCategoryMsg" />
+    </fragment>
+    <fragment
+        android:id="@+id/allOrderDetailsFragment"
+        android:name="com.example.suryatraderscustomer.views.AllOrderDetailsFragment"
+        android:label="Orders" >
+        <action
+            android:id="@+id/action_allOrderDetailsFragment_to_subOrderFragment"
+            app:destination="@id/subOrderFragment" />
+        <action
+            android:id="@+id/action_allOrderDetailsFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subOrderFragment"
+        android:name="com.example.suryatraderscustomer.views.SubOrderFragment"
+        android:label="Order Details" >
+        <argument
+            android:name="orderId"
+            app:argType="integer" />
+        <argument
+            android:name="customerId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.suryatraderscustomer.views.AboutFragment"
+        android:label="About Us"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.example.suryatraderscustomer.views.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.example.suryatraderscustomer.views.ReviewFragment"
+        android:label="Reviews"
+        tools:layout="@layout/fragment_review" >
+        <argument
+            android:name="orderId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFormFragment"
+        android:name="com.example.suryatraderscustomer.views.FeedbackFormFragment"
+        android:label="Feedback Form"
+        tools:layout="@layout/fragment_feedback_form"/>
+</navigation>

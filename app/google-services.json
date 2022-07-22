@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "197160842143",
+    "firebase_url": "https://surya-traders-customer.firebaseio.com",
+    "project_id": "surya-traders-customer",
+    "storage_bucket": "surya-traders-customer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:197160842143:android:f0b650170a4b1ffc6803aa",
+        "android_client_info": {
+          "package_name": "com.example.suryatraderscustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "197160842143-unp7gvg2c72i96o1lec82sh00vbd667b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.suryatraderscustomer",
+            "certificate_hash": "752c3fbf855fefdf96dc9fc223625cfd95712119"
+          }
+        },
+        {
+          "client_id": "197160842143-4r8d063p72oig0h7i4kh1913nnpg6665.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsbw5L1Xxi_UUF_apcFE0ssl9c91rkPqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "197160842143-4r8d063p72oig0h7i4kh1913nnpg6665.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

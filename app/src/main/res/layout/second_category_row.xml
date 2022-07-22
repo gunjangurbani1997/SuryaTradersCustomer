@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="secondCategoryMsg"
+            type="com.example.suryatraderscustomer.models.SecondCategoryMsg" />
+        <variable
+            name="secondCategoryInterface"
+            type="com.example.suryatraderscustomer.adapters.SecondCategoryListAdapter.SecondCategoryInterface" />
+
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/second_cat_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_175sdp"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:strokeColor="@color/orange"
+        app:cardElevation="@dimen/_2sdp"
+        app:rippleColor="@color/dim_org_end"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{(v)->secondCategoryInterface.onSecondCategoryItemClick(secondCategoryMsg)}"
+        >
+
+        <ImageView
+            android:id="@+id/secondCategoryImageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:secondCategoryImage="@{secondCategoryMsg.image}"
+            tools:srcCompat="@tools:sample/avatars"
+            />
+
+            <TextView
+                android:id="@+id/secondCategoryNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(secondCategoryMsg.name)}"
+                android:layout_gravity="left"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+             <TextView
+                 android:id="@+id/secondCategoryPriceTextView"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@{`Price: ₹`+String.valueOf(secondCategoryMsg.price)+`/`+secondCategoryMsg.units}"
+                 android:visibility="@{secondCategoryMsg.price.equals(``)?View.GONE:View.VISIBLE}"
+                 android:layout_marginLeft="@dimen/_10sdp"
+                 android:textColor="@color/black"
+                 android:textSize="15sp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginTop="@dimen/_2sdp"
+                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"/>
+            </FrameLayout>
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

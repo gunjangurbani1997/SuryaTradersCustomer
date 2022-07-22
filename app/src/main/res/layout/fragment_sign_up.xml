@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="customer"
+            type="com.example.suryatraderscustomer.models.Customer" />
+        <variable
+            name="registerViewModel"
+            type="com.example.suryatraderscustomer.viewmodels.RegisterViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/suryatradersbg"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_127sdp"
+                android:src="@drawable/suryalogo"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_50sdp"/>
+
+            <TextView
+                android:id="@+id/create_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="CREATE ACCOUNT"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:textSize="24sp"
+                />
+            <EditText
+                android:id="@+id/customer_first_name"
+                android:text="@={registerViewModel.firstName}"
+                android:hint="First name"
+                android:background="@drawable/shape"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:textColor="#707070"
+                android:textColorHint="#707070"
+                />
+
+            <EditText
+                android:id="@+id/customer_last_name"
+                android:text="@={registerViewModel.lastName}"
+                android:hint="Last Name"
+                android:background="@drawable/shape"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:textColor="#707070"
+                android:textColorHint="#707070"/>
+
+            <EditText
+                android:id="@+id/customer_mobile_number"
+                android:text="@={registerViewModel.mobileNo}"
+                android:hint="Mobile Number"
+                android:background="@drawable/shape"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_baseline_smartphone_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:textColor="#707070"
+                android:textColorHint="#707070"
+               />
+
+            <EditText
+                android:id="@+id/customer_password"
+                android:text="@={registerViewModel.password}"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_width="match_parent"
+                android:hint="Password"
+                android:background="@drawable/shape"
+                app:passwordToggleEnabled="true"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textSize="15sp"
+                android:textColorHint="#707070"
+                android:textColor="#707070"
+                android:drawableLeft="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:inputType="textPassword"
+                android:paddingStart="@dimen/_10sdp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+               />
+
+
+
+            <EditText
+                android:id="@+id/customer_company"
+                android:text="@={registerViewModel.company}"
+                android:background="@drawable/shape"
+                android:hint="Company"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_baseline_location_city_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:textColor="#707070"
+                android:textColorHint="#707070"/>
+
+            <EditText
+                android:id="@+id/customer_address"
+                android:text="@={registerViewModel.address}"
+                android:background="@drawable/shape"
+                android:hint="Address"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:padding="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="3"
+                android:drawableLeft="@drawable/ic_baseline_home_24"
+                android:drawablePadding="@dimen/_30sdp"
+                android:textColor="#707070"
+                android:textColorHint="#707070" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/createAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textColor="#fff"
+                android:textSize="15sp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/round_blue_button"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/alreadyUser"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape"
+                android:text="Log In"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                />
+
+
+        </LinearLayout>
+
+        </ScrollView>
+    </FrameLayout>
+
+</layout>

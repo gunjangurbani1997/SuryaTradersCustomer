@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="thirdCategoryViewModel"
+            type="com.example.suryatraderscustomer.viewmodels.ThirdCategoryViewModel" />
+
+        <variable
+            name="list"
+            type="com.example.suryatraderscustomer.models.UnitColorQuantity" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/colorSpinner"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/spinner_arrow"
+                android:spinnerMode="dropdown" />
+
+
+
+            <EditText
+                android:id="@+id/quantityTV"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="46dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/color_box"
+                android:padding="@dimen/_8sdp"
+                android:hint="Qty"
+                android:inputType="number"
+                android:text="@={list.quantity}"
+                android:textColorHint="#000000"/>
+        </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_10sdp"
+                >
+            <EditText
+                android:id="@+id/unitTV"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:focusable="false"
+                android:background="@drawable/color_box"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/closeButton"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/red"
+                android:background="@drawable/red_border"
+                android:text="Remove"
+                />
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="#C6C6C6"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+</layout>
